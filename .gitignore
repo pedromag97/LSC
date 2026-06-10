@@ -1,0 +1,5 @@
+# Backup do site antigo (194 MB — guardado apenas localmente)
+backup_site_antigo/
+
+# Configuração local do Claude Code
+.claude/
