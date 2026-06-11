@@ -1,6 +1,6 @@
-# Site do Grupo LSC
+﻿# Site do Grupo LSC
 
-Site institucional do **Grupo LSC / Lusocabo** — Telecomunicações (FTTH), Eletricidade Geral, Energias Renováveis e Construção Civil. Em operação desde 2000, com presença em Portugal, Espanha, França e Itália.
+Site institucional do **Grupo LSC / Lusocabo** — Telecomunicações (FTTH), Eletricidade Geral, Energias Renováveis e Construção Civil. Em operação desde 1999, com presença em Portugal, Espanha, França e Itália.
 
 ## Estrutura
 

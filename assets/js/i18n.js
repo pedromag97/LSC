@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    GRUPO LSC — Traduções (PT / EN / FR)
    Para editar textos do site, basta alterar os valores aqui.
    ============================================================ */
@@ -24,7 +24,7 @@ window.I18N = {
 
     "hero.eyebrow": "Telecomunicações · Energia · Construção",
     "hero.title": "Construímos as infraestruturas que <em>ligam o futuro</em>",
-    "hero.sub": "Desde 2000, o Grupo LSC projeta, constrói e mantém redes de fibra ótica, instalações elétricas e centrais solares em Portugal, Espanha, França e Itália.",
+    "hero.sub": "Desde 1999, o Grupo LSC projeta, constrói e mantém redes de fibra ótica, instalações elétricas e centrais solares em Portugal, Espanha, França e Itália.",
     "hero.cta1": "Áreas de negócio",
     "hero.cta2": "Fale connosco",
 
@@ -34,8 +34,8 @@ window.I18N = {
     "stats.clients": "Clientes e parceiros",
 
     "about.kicker": "Sobre Nós",
-    "about.title": "Competência e compromisso desde 2000",
-    "about.p1": "No <strong>Grupo LSC</strong>, ligamos o presente ao futuro com inovação, competência, qualidade e fiabilidade. Desde 2000, atuamos nos setores das telecomunicações, das instalações elétricas e das energias renováveis, com operações em <strong>Portugal, Espanha, França e Itália</strong>.",
+    "about.title": "Competência e compromisso desde 1999",
+    "about.p1": "No <strong>Grupo LSC</strong>, ligamos o presente ao futuro com inovação, competência, qualidade e fiabilidade. Desde 1999, atuamos nos setores das telecomunicações, das instalações elétricas e das energias renováveis, com operações em <strong>Portugal, Espanha, França e Itália</strong>.",
     "about.p2": "Apoiamos grandes operadores como <strong>MEO, NOS, Vodafone, DIGI, DSTelecom, SFR e MasOrange</strong>, participámos em obras de referência como a rede elétrica do <strong>metro de Bolonha (Itália)</strong> e impulsionamos a transição energética com sistemas solares eficientes.",
     "about.p3": "Com equipas técnicas especializadas e presença internacional, entregamos soluções que fazem a diferença.",
     "about.v1": "Inovação",
@@ -133,7 +133,7 @@ window.I18N = {
     "form.ok": "Mensagem enviada com sucesso. Obrigado!",
     "form.err": "Não foi possível enviar. Tente novamente ou use o email.",
 
-    "footer.tagline": "Inovação, Transformação e Qualidade. Telecomunicações, eletricidade e energias renováveis desde 2000.",
+    "footer.tagline": "Inovação, Transformação e Qualidade. Telecomunicações, eletricidade e energias renováveis desde 1999.",
     "footer.nav": "Navegação",
     "footer.areas": "Áreas de Negócio",
     "footer.contact": "Contactos",
@@ -149,7 +149,7 @@ window.I18N = {
     /* Telecom */
     "tel.heroTitle": "Telecomunicações",
     "tel.heroSub": "Redes de fibra ótica de ponta a ponta — do projeto à manutenção.",
-    "tel.introTitle": "Especialistas em redes FTTH desde 2000",
+    "tel.introTitle": "Especialistas em redes FTTH desde 1999",
     "tel.p1": "Projetamos, construímos e mantemos redes de fibra ótica (FTTH) para os principais operadores em Portugal, Espanha e França. Da infraestrutura à casa do cliente, asseguramos todas as fases: condutas, lançamento e fusão de cabo, instalação e certificação.",
     "tel.p2": "Trabalhamos com <strong>MEO, NOS, Vodafone, DIGI e DSTelecom</strong> em Portugal, <strong>SFR</strong> em França e <strong>MasOrange</strong> em Espanha — milhares de quilómetros de rede construídos com qualidade, rapidez e fiabilidade.",
     "tel.s1": "Construção de redes FTTH / FTTx",
@@ -250,7 +250,7 @@ window.I18N = {
 
     "hero.eyebrow": "Telecommunications · Energy · Construction",
     "hero.title": "We build the infrastructure that <em>connects the future</em>",
-    "hero.sub": "Since 2000, LSC Group has designed, built and maintained fibre-optic networks, electrical installations and solar power plants across Portugal, Spain, France and Italy.",
+    "hero.sub": "Since 1999, LSC Group has designed, built and maintained fibre-optic networks, electrical installations and solar power plants across Portugal, Spain, France and Italy.",
     "hero.cta1": "Business areas",
     "hero.cta2": "Talk to us",
 
@@ -260,8 +260,8 @@ window.I18N = {
     "stats.clients": "Clients & partners",
 
     "about.kicker": "About Us",
-    "about.title": "Expertise and commitment since 2000",
-    "about.p1": "At <strong>LSC Group</strong>, we connect the present to the future with innovation, expertise, quality and reliability. Since 2000 we have worked in telecommunications, electrical installations and renewable energy, operating in <strong>Portugal, Spain, France and Italy</strong>.",
+    "about.title": "Expertise and commitment since 1999",
+    "about.p1": "At <strong>LSC Group</strong>, we connect the present to the future with innovation, expertise, quality and reliability. Since 1999 we have worked in telecommunications, electrical installations and renewable energy, operating in <strong>Portugal, Spain, France and Italy</strong>.",
     "about.p2": "We support major operators such as <strong>MEO, NOS, Vodafone, DIGI, DSTelecom, SFR and MasOrange</strong>, took part in landmark works such as the <strong>Bologna metro power network (Italy)</strong>, and drive the energy transition with efficient solar systems.",
     "about.p3": "With specialised technical teams and an international footprint, we deliver solutions that make a difference.",
     "about.v1": "Innovation",
@@ -359,7 +359,7 @@ window.I18N = {
     "form.ok": "Message sent successfully. Thank you!",
     "form.err": "Could not send. Please try again or use email.",
 
-    "footer.tagline": "Innovation, Transformation and Quality. Telecommunications, electricity and renewable energy since 2000.",
+    "footer.tagline": "Innovation, Transformation and Quality. Telecommunications, electricity and renewable energy since 1999.",
     "footer.nav": "Navigation",
     "footer.areas": "Business Areas",
     "footer.contact": "Contact",
@@ -374,7 +374,7 @@ window.I18N = {
 
     "tel.heroTitle": "Telecommunications",
     "tel.heroSub": "End-to-end fibre-optic networks — from design to maintenance.",
-    "tel.introTitle": "FTTH network specialists since 2000",
+    "tel.introTitle": "FTTH network specialists since 1999",
     "tel.p1": "We design, build and maintain fibre-optic (FTTH) networks for leading operators in Portugal, Spain and France. From backbone to the customer's home, we cover every phase: ducting, cable pulling and splicing, installation and certification.",
     "tel.p2": "We work with <strong>MEO, NOS, Vodafone, DIGI and DSTelecom</strong> in Portugal, <strong>SFR</strong> in France and <strong>MasOrange</strong> in Spain — thousands of kilometres of network built with quality, speed and reliability.",
     "tel.s1": "FTTH / FTTx network construction",
@@ -472,7 +472,7 @@ window.I18N = {
 
     "hero.eyebrow": "Télécommunications · Énergie · Construction",
     "hero.title": "Nous construisons les infrastructures qui <em>relient l'avenir</em>",
-    "hero.sub": "Depuis 2000, le Groupe LSC conçoit, construit et entretient des réseaux de fibre optique, des installations électriques et des centrales solaires au Portugal, en Espagne, en France et en Italie.",
+    "hero.sub": "Depuis 1999, le Groupe LSC conçoit, construit et entretient des réseaux de fibre optique, des installations électriques et des centrales solaires au Portugal, en Espagne, en France et en Italie.",
     "hero.cta1": "Domaines d'activité",
     "hero.cta2": "Contactez-nous",
 
@@ -482,8 +482,8 @@ window.I18N = {
     "stats.clients": "Clients et partenaires",
 
     "about.kicker": "À Propos",
-    "about.title": "Compétence et engagement depuis 2000",
-    "about.p1": "Au <strong>Groupe LSC</strong>, nous relions le présent à l'avenir avec innovation, compétence, qualité et fiabilité. Depuis 2000, nous travaillons dans les télécommunications, les installations électriques et les énergies renouvelables, au <strong>Portugal, en Espagne, en France et en Italie</strong>.",
+    "about.title": "Compétence et engagement depuis 1999",
+    "about.p1": "Au <strong>Groupe LSC</strong>, nous relions le présent à l'avenir avec innovation, compétence, qualité et fiabilité. Depuis 1999, nous travaillons dans les télécommunications, les installations électriques et les énergies renouvelables, au <strong>Portugal, en Espagne, en France et en Italie</strong>.",
     "about.p2": "Nous accompagnons de grands opérateurs comme <strong>MEO, NOS, Vodafone, DIGI, DSTelecom, SFR et MasOrange</strong>, avons participé à des chantiers de référence comme le <strong>réseau électrique du métro de Bologne (Italie)</strong> et accélérons la transition énergétique avec des systèmes solaires performants.",
     "about.p3": "Avec des équipes techniques spécialisées et une présence internationale, nous livrons des solutions qui font la différence.",
     "about.v1": "Innovation",
@@ -581,7 +581,7 @@ window.I18N = {
     "form.ok": "Message envoyé avec succès. Merci !",
     "form.err": "Envoi impossible. Réessayez ou utilisez l'email.",
 
-    "footer.tagline": "Innovation, Transformation et Qualité. Télécommunications, électricité et énergies renouvelables depuis 2000.",
+    "footer.tagline": "Innovation, Transformation et Qualité. Télécommunications, électricité et énergies renouvelables depuis 1999.",
     "footer.nav": "Navigation",
     "footer.areas": "Domaines d'Activité",
     "footer.contact": "Contact",
@@ -596,7 +596,7 @@ window.I18N = {
 
     "tel.heroTitle": "Télécommunications",
     "tel.heroSub": "Réseaux de fibre optique de bout en bout — de la conception à la maintenance.",
-    "tel.introTitle": "Spécialistes des réseaux FTTH depuis 2000",
+    "tel.introTitle": "Spécialistes des réseaux FTTH depuis 1999",
     "tel.p1": "Nous concevons, construisons et entretenons des réseaux de fibre optique (FTTH) pour les grands opérateurs au Portugal, en Espagne et en France. De l'infrastructure jusqu'au domicile du client, nous assurons toutes les phases : fourreaux, tirage et soudure de câbles, installation et certification.",
     "tel.p2": "Nous travaillons avec <strong>MEO, NOS, Vodafone, DIGI et DSTelecom</strong> au Portugal, <strong>SFR</strong> en France et <strong>MasOrange</strong> en Espagne — des milliers de kilomètres de réseau construits avec qualité, rapidité et fiabilité.",
     "tel.s1": "Construction de réseaux FTTH / FTTx",
