@@ -229,6 +229,7 @@ window.I18N = {
     "civ.galTitle": "Obras e remodelações",
     "civ.fap": "Obras de apoio",
     "civ.cap1": "Obras de construção civil, Portugal",
+    "civ.cap2": "Abertura de vala e instalação de condutas, Portugal",
     "civ.ctaTitle": "Precisa de apoio em obra?",
 
     /* House Flipping */
@@ -466,6 +467,7 @@ window.I18N = {
     "civ.galTitle": "Works and renovations",
     "civ.fap": "Support works",
     "civ.cap1": "Civil construction works, Portugal",
+    "civ.cap2": "Trenching and duct installation, Portugal",
     "civ.ctaTitle": "Need support on site?",
     "hou.introTitle": "Renovation and upgrading of old houses",
     "hou.p1": "We identify old houses with potential and renovate them from the ground up — structure, roof, electrical installations, plumbing, insulation and finishes — until they are ready to move in.",
@@ -701,6 +703,7 @@ window.I18N = {
     "civ.galTitle": "Chantiers et rénovations",
     "civ.fap": "Travaux de soutien",
     "civ.cap1": "Travaux de génie civil, Portugal",
+    "civ.cap2": "Tranchée et pose de fourreaux, Portugal",
     "civ.ctaTitle": "Besoin de soutien sur chantier ?",
     "hou.introTitle": "Rénovation et valorisation de maisons anciennes",
     "hou.p1": "Nous identifions des maisons anciennes à fort potentiel et les rénovons entièrement — structure, toiture, installations électriques, plomberie, isolation et finitions — jusqu'à ce qu'elles soient prêtes à habiter.",
