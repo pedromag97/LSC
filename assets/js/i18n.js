@@ -11,7 +11,6 @@ window.I18N = {
     "meta.elec": "Eletricidade Geral — Grupo LSC",
     "meta.renov": "Energias Renováveis — Grupo LSC",
     "meta.civil": "Construção Civil — Grupo LSC",
-    "meta.house": "House Flipping — Grupo LSC",
 
     "nav.home": "Início",
     "nav.about": "Sobre Nós",
@@ -20,7 +19,6 @@ window.I18N = {
     "nav.elec": "Eletricidade Geral",
     "nav.renov": "Energias Renováveis",
     "nav.civil": "Construção Civil",
-    "nav.house": "House Flipping",
     "nav.recruit": "Recrutamento",
     "nav.contact": "Contactos",
 
@@ -51,7 +49,7 @@ window.I18N = {
 
     "areas.kicker": "Áreas de Negócio",
     "areas.title": "O que fazemos",
-    "areas.sub": "Cinco áreas complementares, uma só exigência: qualidade.",
+    "areas.sub": "Quatro áreas complementares, uma só exigência: qualidade.",
     "areas.telecom": "Telecomunicações",
     "areas.telecomd": "Projeto, construção e manutenção de redes de fibra ótica (FTTH) para os principais operadores europeus.",
     "areas.elec": "Eletricidade Geral",
@@ -59,9 +57,7 @@ window.I18N = {
     "areas.renov": "Energias Renováveis",
     "areas.renovd": "Centrais solares fotovoltaicas para autoconsumo industrial, comercial e residencial.",
     "areas.civil": "Construção Civil",
-    "areas.civild": "Obras de apoio às infraestruturas de redes: valas, condutas e reposição de pavimentos.",
-    "areas.house": "House Flipping",
-    "areas.housed": "Remodelação e valorização de casas antigas — compradas, renovadas e prontas a habitar.",
+    "areas.civild": "Obras de apoio às redes e house flipping — remodelação de casas antigas.",
     "areas.more": "Saber mais",
 
     "tech.kicker": "Conhecimento Técnico",
@@ -88,7 +84,6 @@ window.I18N = {
     "tag.elec": "Eletricidade",
     "tag.renov": "Renováveis",
     "tag.civil": "Construção Civil",
-    "tag.house": "House Flipping",
     "proj.1": "FTTH DSTelecom", "proj.1m": "2010–Presente · Portugal",
     "proj.2": "FTTH SFR", "proj.2m": "2017–Presente · França",
     "proj.3": "FTTH Vodafone", "proj.3m": "2010–Presente · Portugal",
@@ -223,21 +218,20 @@ window.I18N = {
 
     /* Civil */
     "civ.heroTitle": "Construção Civil",
-    "civ.heroSub": "Ao serviço das redes, da energia e da remodelação.",
+    "civ.heroSub": "Obras de apoio às redes e remodelação de casas antigas.",
     "civ.introTitle": "Obras de apoio a infraestruturas",
     "civ.p1": "A área de construção civil do Grupo LSC nasceu para apoiar os nossos projetos de telecomunicações e energia: abertura e fecho de valas, construção de condutas e câmaras de visita, e reposição de pavimentos.",
-    "civ.p2": "É uma das nossas áreas em maior crescimento — <strong>novidades em breve</strong>.",
+    "civ.p2": "É a nossa área em maior crescimento — <strong>novidades em breve</strong>.",
     "civ.s1": "Abertura de valas e construção de condutas",
     "civ.s2": "Câmaras de visita e armários técnicos",
     "civ.s3": "Reposição de pavimentos",
     "civ.s4": "Apoio a redes elétricas e de fibra ótica",
-    "civ.galTitle": "Obras em curso",
+    "civ.galTitle": "Obras e remodelações",
+    "civ.fap": "Obras de apoio",
     "civ.cap1": "Obras de construção civil, Portugal",
     "civ.ctaTitle": "Precisa de apoio em obra?",
 
     /* House Flipping */
-    "hou.heroTitle": "House Flipping",
-    "hou.heroSub": "O mais recente projeto do grupo: remodelamos casas antigas e devolvemos-lhes vida.",
     "hou.introTitle": "Remodelação e valorização de casas antigas",
     "hou.p1": "Identificamos casas antigas com potencial e remodelamo-las de raiz — estrutura, telhado, instalações elétricas, canalizações, isolamento e acabamentos — até ficarem prontas a habitar.",
     "hou.p2": "Juntamos as competências do grupo em <strong>construção civil, eletricidade e energias renováveis</strong> para entregar remodelações completas com qualidade de obra nova e eficiência energética moderna.",
@@ -249,7 +243,6 @@ window.I18N = {
     "hou.s6": "Valorização do imóvel para venda ou habitação",
     "hou.galTitle": "Projetos de remodelação",
     "hou.cap1": "Remodelação de moradia, Portugal",
-    "hou.ctaTitle": "Quer remodelar ou procura uma casa renovada?"
   },
 
   /* ---------------- ENGLISH ---------------- */
@@ -259,7 +252,6 @@ window.I18N = {
     "meta.elec": "Electrical Installations — LSC Group",
     "meta.renov": "Renewable Energy — LSC Group",
     "meta.civil": "Civil Construction — LSC Group",
-    "meta.house": "House Flipping — LSC Group",
 
     "nav.home": "Home",
     "nav.about": "About Us",
@@ -268,7 +260,6 @@ window.I18N = {
     "nav.elec": "Electrical Installations",
     "nav.renov": "Renewable Energy",
     "nav.civil": "Civil Construction",
-    "nav.house": "House Flipping",
     "nav.recruit": "Careers",
     "nav.contact": "Contact",
 
@@ -299,7 +290,7 @@ window.I18N = {
 
     "areas.kicker": "Business Areas",
     "areas.title": "What we do",
-    "areas.sub": "Five complementary areas, one single standard: quality.",
+    "areas.sub": "Four complementary areas, one single standard: quality.",
     "areas.telecom": "Telecommunications",
     "areas.telecomd": "Design, construction and maintenance of fibre-optic (FTTH) networks for leading European operators.",
     "areas.elec": "Electrical Installations",
@@ -307,9 +298,7 @@ window.I18N = {
     "areas.renov": "Renewable Energy",
     "areas.renovd": "Photovoltaic solar plants for industrial, commercial and residential self-consumption.",
     "areas.civil": "Civil Construction",
-    "areas.civild": "Support works for network infrastructure: trenches, ducts and pavement reinstatement.",
-    "areas.house": "House Flipping",
-    "areas.housed": "Renovation and upgrading of old houses — bought, refurbished and ready to move in.",
+    "areas.civild": "Network support works and house flipping — renovation of old houses.",
     "areas.more": "Learn more",
 
     "tech.kicker": "Technical Know-how",
@@ -336,7 +325,6 @@ window.I18N = {
     "tag.elec": "Electricity",
     "tag.renov": "Renewables",
     "tag.civil": "Civil Construction",
-    "tag.house": "House Flipping",
     "proj.1": "FTTH DSTelecom", "proj.1m": "2010–Present · Portugal",
     "proj.2": "FTTH SFR", "proj.2m": "2017–Present · France",
     "proj.3": "FTTH Vodafone", "proj.3m": "2010–Present · Portugal",
@@ -467,20 +455,18 @@ window.I18N = {
     "ren.ctaTitle": "Ready to produce your own energy?",
 
     "civ.heroTitle": "Civil Construction",
-    "civ.heroSub": "Serving networks, energy and renovation.",
+    "civ.heroSub": "Network support works and renovation of old houses.",
     "civ.introTitle": "Infrastructure support works",
     "civ.p1": "LSC Group's civil construction area was created to support our telecommunications and energy projects: trenching, duct and manhole construction, and pavement reinstatement.",
-    "civ.p2": "It is one of our fastest-growing areas — <strong>news coming soon</strong>.",
+    "civ.p2": "It is our fastest-growing area — <strong>news coming soon</strong>.",
     "civ.s1": "Trenching and duct construction",
     "civ.s2": "Manholes and technical cabinets",
     "civ.s3": "Pavement reinstatement",
     "civ.s4": "Support for power and fibre networks",
-    "civ.galTitle": "Works in progress",
+    "civ.galTitle": "Works and renovations",
+    "civ.fap": "Support works",
     "civ.cap1": "Civil construction works, Portugal",
     "civ.ctaTitle": "Need support on site?",
-
-    "hou.heroTitle": "House Flipping",
-    "hou.heroSub": "The group's newest venture: we renovate old houses and bring them back to life.",
     "hou.introTitle": "Renovation and upgrading of old houses",
     "hou.p1": "We identify old houses with potential and renovate them from the ground up — structure, roof, electrical installations, plumbing, insulation and finishes — until they are ready to move in.",
     "hou.p2": "We combine the group's expertise in <strong>civil construction, electricity and renewable energy</strong> to deliver complete renovations with new-build quality and modern energy efficiency.",
@@ -492,7 +478,6 @@ window.I18N = {
     "hou.s6": "Property upgrading for sale or living",
     "hou.galTitle": "Renovation projects",
     "hou.cap1": "House renovation, Portugal",
-    "hou.ctaTitle": "Want to renovate, or looking for a refurbished home?"
   },
 
   /* ---------------- FRANÇAIS ---------------- */
@@ -502,7 +487,6 @@ window.I18N = {
     "meta.elec": "Installations Électriques — Groupe LSC",
     "meta.renov": "Énergies Renouvelables — Groupe LSC",
     "meta.civil": "Génie Civil — Groupe LSC",
-    "meta.house": "House Flipping — Groupe LSC",
 
     "nav.home": "Accueil",
     "nav.about": "À Propos",
@@ -511,7 +495,6 @@ window.I18N = {
     "nav.elec": "Installations Électriques",
     "nav.renov": "Énergies Renouvelables",
     "nav.civil": "Génie Civil",
-    "nav.house": "House Flipping",
     "nav.recruit": "Recrutement",
     "nav.contact": "Contact",
 
@@ -542,7 +525,7 @@ window.I18N = {
 
     "areas.kicker": "Domaines d'Activité",
     "areas.title": "Ce que nous faisons",
-    "areas.sub": "Cinq domaines complémentaires, une seule exigence : la qualité.",
+    "areas.sub": "Quatre domaines complémentaires, une seule exigence : la qualité.",
     "areas.telecom": "Télécommunications",
     "areas.telecomd": "Conception, construction et maintenance de réseaux de fibre optique (FTTH) pour les grands opérateurs européens.",
     "areas.elec": "Installations Électriques",
@@ -550,9 +533,7 @@ window.I18N = {
     "areas.renov": "Énergies Renouvelables",
     "areas.renovd": "Centrales solaires photovoltaïques pour l'autoconsommation industrielle, commerciale et résidentielle.",
     "areas.civil": "Génie Civil",
-    "areas.civild": "Travaux de soutien aux infrastructures réseaux : tranchées, fourreaux et réfection de chaussées.",
-    "areas.house": "House Flipping",
-    "areas.housed": "Rénovation et valorisation de maisons anciennes — achetées, rénovées et prêtes à habiter.",
+    "areas.civild": "Travaux de soutien aux réseaux et house flipping — rénovation de maisons anciennes.",
     "areas.more": "En savoir plus",
 
     "tech.kicker": "Savoir-faire Technique",
@@ -579,7 +560,6 @@ window.I18N = {
     "tag.elec": "Électricité",
     "tag.renov": "Renouvelables",
     "tag.civil": "Génie Civil",
-    "tag.house": "House Flipping",
     "proj.1": "FTTH DSTelecom", "proj.1m": "2010–Aujourd'hui · Portugal",
     "proj.2": "FTTH SFR", "proj.2m": "2017–Aujourd'hui · France",
     "proj.3": "FTTH Vodafone", "proj.3m": "2010–Aujourd'hui · Portugal",
@@ -710,20 +690,18 @@ window.I18N = {
     "ren.ctaTitle": "Prêt à produire votre propre énergie ?",
 
     "civ.heroTitle": "Génie Civil",
-    "civ.heroSub": "Au service des réseaux, de l'énergie et de la rénovation.",
+    "civ.heroSub": "Travaux de soutien aux réseaux et rénovation de maisons anciennes.",
     "civ.introTitle": "Travaux de soutien aux infrastructures",
     "civ.p1": "Le pôle génie civil du Groupe LSC est né pour soutenir nos projets de télécommunications et d'énergie : ouverture et fermeture de tranchées, construction de fourreaux et de chambres de tirage, et réfection de chaussées.",
-    "civ.p2": "C'est l'un de nos domaines en plus forte croissance — <strong>des nouveautés bientôt</strong>.",
+    "civ.p2": "C'est notre domaine en plus forte croissance — <strong>des nouveautés bientôt</strong>.",
     "civ.s1": "Tranchées et construction de fourreaux",
     "civ.s2": "Chambres de tirage et armoires techniques",
     "civ.s3": "Réfection de chaussées",
     "civ.s4": "Soutien aux réseaux électriques et fibre",
-    "civ.galTitle": "Chantiers en cours",
+    "civ.galTitle": "Chantiers et rénovations",
+    "civ.fap": "Travaux de soutien",
     "civ.cap1": "Travaux de génie civil, Portugal",
     "civ.ctaTitle": "Besoin de soutien sur chantier ?",
-
-    "hou.heroTitle": "House Flipping",
-    "hou.heroSub": "Le tout dernier projet du groupe : nous rénovons des maisons anciennes et leur redonnons vie.",
     "hou.introTitle": "Rénovation et valorisation de maisons anciennes",
     "hou.p1": "Nous identifions des maisons anciennes à fort potentiel et les rénovons entièrement — structure, toiture, installations électriques, plomberie, isolation et finitions — jusqu'à ce qu'elles soient prêtes à habiter.",
     "hou.p2": "Nous combinons les compétences du groupe en <strong>génie civil, électricité et énergies renouvelables</strong> pour livrer des rénovations complètes avec la qualité du neuf et une efficacité énergétique moderne.",
@@ -735,6 +713,5 @@ window.I18N = {
     "hou.s6": "Valorisation du bien pour la vente ou l'habitation",
     "hou.galTitle": "Projets de rénovation",
     "hou.cap1": "Rénovation de maison, Portugal",
-    "hou.ctaTitle": "Envie de rénover, ou à la recherche d'une maison rénovée ?"
   }
 };

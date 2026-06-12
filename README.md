@@ -10,8 +10,7 @@ Site institucional do **Grupo LSC / Lusocabo** — Telecomunicações (FTTH), El
 | `telecom.html` | Telecomunicações — redes FTTH |
 | `elec.html` | Eletricidade Geral — instalações e carregadores VE |
 | `renovaveis.html` | Energias Renováveis — centrais fotovoltaicas |
-| `civil.html` | Construção Civil |
-| `house.html` | House Flipping — remodelação de casas antigas |
+| `civil.html` | Construção Civil — obras de apoio e house flipping (remodelação de casas antigas) |
 | `assets/css/site.css` | Folha de estilos única |
 | `assets/js/site.js` | Funcionalidades (menu, galerias, lightbox, contadores, formulário) |
 | `assets/js/i18n.js` | **Todos os textos do site em PT / EN / FR** — editar aqui |
