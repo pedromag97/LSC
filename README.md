@@ -21,7 +21,7 @@ Os textos das três línguas estão centralizados em `assets/js/i18n.js`. Cada c
 
 ## Formulário de contacto
 
-O formulário usa o [Formspree](https://formspree.io). Para ativar, criar uma conta gratuita, criar um formulário e substituir `SEU_ID_FORMSPREE` no `index.html` pelo ID gerado.
+O formulário de contacto do `index.html` é recebido pelo **Netlify Forms** (formulário `contacto`) e usa o mesmo email com design descrito abaixo. Se o Netlify falhar, a mensagem segue pelo [Formspree](https://formspree.io) (ID no atributo `data-fallback`).
 
 ## Pedido de orçamento de carregadores
 

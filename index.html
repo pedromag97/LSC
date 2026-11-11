@@ -266,6 +266,8 @@
     </div>
     <div class="marquee" style="--mq-bg:var(--bg-soft);">
       <div class="marquee-track">
+        <img src="assets/images/CLIENTE_dst.jpg" alt="DST Group" loading="lazy" style="height:250px;margin:-99px -50px;mix-blend-mode:multiply;">
+        <img src="assets/images/CLIENTE_dte.svg" alt="DTE" loading="lazy">
         <img src="assets/images/CLIENTE_dstelecom.jpg" alt="DSTelecom" loading="lazy">
         <img src="assets/images/CLIENTE_circet.png" alt="Circet" loading="lazy">
         <img src="assets/images/CLIENTE_cme.png" alt="CME" loading="lazy">
@@ -317,14 +319,19 @@
         </div>
       </div>
       <div class="contact-form reveal">
-        <form action="https://formspree.io/f/mojzkaop" method="POST">
+        <!-- Envio: Netlify Forms; se falhar, segue por Formspree -->
+        <form name="contacto" action="/" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+              data-fallback="https://formspree.io/f/mojzkaop" data-subject="Contacto do site">
+          <input type="hidden" name="form-name" value="contacto">
+          <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none">
+          <input type="hidden" name="subject" data-remove-prefix value="Contacto do site">
           <div class="form-row">
             <fieldset><input name="name" type="text" data-i18n-ph="form.name" placeholder="Nome *" required></fieldset>
             <fieldset><input name="phone" type="tel" data-i18n-ph="form.phone" placeholder="Telemóvel"></fieldset>
           </div>
           <div class="form-row">
             <fieldset><input name="email" type="email" data-i18n-ph="form.email" placeholder="Email *" required></fieldset>
-            <fieldset><input name="subject" type="text" data-i18n-ph="form.subject" placeholder="Assunto"></fieldset>
+            <fieldset><input name="assunto" type="text" data-i18n-ph="form.subject" placeholder="Assunto"></fieldset>
           </div>
           <fieldset><textarea name="message" data-i18n-ph="form.msg" placeholder="Mensagem *" required></textarea></fieldset>
           <button type="submit" class="btn btn-navy" data-i18n="form.send">Enviar mensagem</button>

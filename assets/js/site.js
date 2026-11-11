@@ -231,8 +231,9 @@
               var empty = e[1] === "" || (e[1] instanceof File && !e[1].size);
               if (empty && e[0] !== "form-name" && e[0] !== "bot-field") data.delete(e[0]);
             });
-            data.set("subject", "Pedido de orçamento — Carregador VE — " +
-              (data.get("Nome") || "") + " (" + (data.get("Localidade") || "") + ")");
+            var who = data.get("Nome") || data.get("name") || "";
+            var where = data.get("Localidade") || data.get("assunto") || "";
+            data.set("subject", (form.getAttribute("data-subject") || "Formulário") + " — " + who + (where ? " (" + where + ")" : ""));
             return post(location.pathname, data);
           })
           .catch(function () { return { ok: false }; })
