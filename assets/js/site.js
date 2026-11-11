@@ -183,7 +183,24 @@
     });
   }
 
-  /* ---------- Formulário de contacto (Formspree) ---------- */
+  /* ---------- Reduzir fotografias antes do envio (máx. 1600 px, JPEG) ---------- */
+  function shrinkImage(file) {
+    return new Promise(function (resolve) {
+      if (!/^image\//.test(file.type) || !window.createImageBitmap) return resolve(file);
+      createImageBitmap(file).then(function (bmp) {
+        var s = Math.min(1, 1600 / Math.max(bmp.width, bmp.height));
+        var c = document.createElement("canvas");
+        c.width = Math.round(bmp.width * s);
+        c.height = Math.round(bmp.height * s);
+        c.getContext("2d").drawImage(bmp, 0, 0, c.width, c.height);
+        c.toBlob(function (b) {
+          resolve(b ? new File([b], file.name.replace(/\.\w+$/, "") + ".jpg", { type: "image/jpeg" }) : file);
+        }, "image/jpeg", 0.8);
+      }).catch(function () { resolve(file); });
+    });
+  }
+
+  /* ---------- Formulários (contacto: Formspree · orçamento: Netlify Forms) ---------- */
   var form = document.querySelector(".contact-form form");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -191,14 +208,45 @@
       var status = form.querySelector(".form-status");
       var btn = form.querySelector("button[type=submit]");
       btn.disabled = true;
-      fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" }
-      }).then(function (r) {
+      status.textContent = "";
+
+      function post(url, data) {
+        return fetch(url, { method: "POST", body: data, headers: { Accept: "application/json" } });
+      }
+
+      var okKey = form.getAttribute("data-ok") || "form.ok";
+      var sending;
+      if (form.hasAttribute("data-netlify")) {
+        /* Netlify Forms (com fotografias reduzidas); se falhar, Formspree sem anexos */
+        var fileInputs = Array.prototype.slice.call(form.querySelectorAll("input[type=file]"));
+        var picked = fileInputs.filter(function (i) { return i.files.length; });
+        sending = Promise.all(picked.map(function (i) { return shrinkImage(i.files[0]); }))
+          .then(function (small) {
+            var data = new FormData(form);
+            picked.forEach(function (i, n) { data.set(i.name, small[n], small[n].name); });
+            return post(location.pathname, data);
+          })
+          .catch(function () { return { ok: false }; })
+          .then(function (r) {
+            if (r.ok) return r;
+            var data = new FormData(form);
+            fileInputs.forEach(function (i) { data.delete(i.name); });
+            data.delete("form-name");
+            data.delete("bot-field");
+            if (picked.length) {
+              data.append("Fotografias", picked.length + " selecionada(s), não anexadas — pedir ao cliente");
+              okKey = form.getAttribute("data-ok-nofiles") || okKey;
+            }
+            return post(form.getAttribute("data-fallback"), data);
+          });
+      } else {
+        sending = post(form.action, new FormData(form));
+      }
+
+      sending.then(function (r) {
         if (r.ok) {
           form.reset();
-          status.textContent = t(form.getAttribute("data-ok") || "form.ok");
+          status.textContent = t(okKey);
           status.style.color = "#15803d";
         } else {
           status.textContent = t("form.err");

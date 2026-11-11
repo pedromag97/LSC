@@ -87,7 +87,12 @@
       </div>
 
       <div class="contact-form reveal">
-        <form action="https://formspree.io/f/mojzkaop" method="POST" data-ok="ev.ok">
+        <!-- Envio: Netlify Forms (aceita fotografias); se falhar, segue por Formspree sem anexos -->
+        <form name="orcamento-carregadores" action="/carregadores.html" method="POST" enctype="multipart/form-data"
+              data-netlify="true" netlify-honeypot="bot-field"
+              data-fallback="https://formspree.io/f/mojzkaop" data-ok="ev.ok" data-ok-nofiles="ev.okNoPhotos">
+          <input type="hidden" name="form-name" value="orcamento-carregadores">
+          <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none">
           <input type="hidden" name="_subject" value="Pedido de orçamento — Carregador VE">
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
 
@@ -151,6 +156,12 @@
           </div>
 
           <fieldset><textarea name="Observações" data-i18n-ph="ev.fMsg" placeholder="Observações (percurso dos cabos, garagem coletiva, prazos…)"></textarea></fieldset>
+          <p class="file-title" data-i18n="ev.fPhotos">Fotografias (opcional)</p>
+          <div class="file-grid">
+            <fieldset><label for="ev-foto1" data-i18n="ev.ph1">Quadro elétrico</label><input id="ev-foto1" name="Foto do quadro elétrico" type="file" accept="image/*"></fieldset>
+            <fieldset><label for="ev-foto2" data-i18n="ev.ph2">Local do carregador</label><input id="ev-foto2" name="Foto do local" type="file" accept="image/*"></fieldset>
+            <fieldset><label for="ev-foto3" data-i18n="ev.ph3">Outra fotografia</label><input id="ev-foto3" name="Outra foto" type="file" accept="image/*"></fieldset>
+          </div>
           <button type="submit" class="btn btn-navy" data-i18n="ev.send">Pedir orçamento</button>
           <p class="form-status" role="status" style="margin-top:12px;font-weight:600;"></p>
           <p class="form-note" data-i18n="ev.note">* Campos obrigatórios. Depois do pedido poderemos solicitar fotografias do quadro elétrico e do local.</p>
@@ -159,8 +170,27 @@
     </div>
   </section>
 
+  <!-- ===== Imagens ilustrativas (banco de imagens Unsplash) ===== -->
+  <section style="background:var(--bg-soft);">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="ev.galKicker">Carregue em casa ou na empresa</span>
+        <h2 data-i18n="ev.galTitle">Uma solução para cada espaço</h2>
+      </div>
+      <div class="gallery reveal">
+        <figure class="g-item"><img src="assets/images/EV_stock_1.jpg" alt="Carregador de parede junto a um carro elétrico" loading="lazy"></figure>
+        <figure class="g-item"><img src="assets/images/EV_stock_2.jpg" alt="Carregador instalado na entrada de uma moradia" loading="lazy"></figure>
+        <figure class="g-item"><img src="assets/images/EV_stock_3.jpg" alt="Carregador de parede com cabo enrolado" loading="lazy"></figure>
+        <figure class="g-item"><img src="assets/images/EV_stock_4.jpg" alt="Carro elétrico a carregar junto a um carregador de parede" loading="lazy"></figure>
+        <figure class="g-item"><img src="assets/images/EV_stock_5.jpg" alt="Cabo de carregamento ligado a um carregador de parede" loading="lazy"></figure>
+        <figure class="g-item"><img src="assets/images/EV_stock_6.jpg" alt="Utilização de um carregador de parede" loading="lazy"></figure>
+      </div>
+      <p class="form-note" style="text-align:center;margin-top:18px;" data-i18n="ev.galNote">Imagens meramente ilustrativas.</p>
+    </div>
+  </section>
+
   <!-- ===== CTA ===== -->
-  <section class="cta-band">
+  <section class="cta-band" style="background:var(--bg);">
     <div class="container reveal">
       <h2 data-i18n="ev.ctaTitle">Veja instalações que já realizámos</h2>
       <p data-i18n="ev.ctaP"></p>

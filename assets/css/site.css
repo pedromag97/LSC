@@ -519,6 +519,12 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7.5px) rota
 }
 .contact-form input:focus, .contact-form textarea:focus { border-color: var(--blue); background: #fff; }
 .contact-form textarea { resize: vertical; min-height: 140px; }
+.file-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 10px; }
+.file-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.file-grid fieldset { min-width: 0; }
+.file-grid label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+.contact-form input[type=file] { font-size: 0.8rem; padding: 10px; cursor: pointer; }
+@media (max-width: 640px) { .file-grid { grid-template-columns: 1fr; } }
 .form-note { font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
 
 /* ---------- Galeria + filtros ---------- */
