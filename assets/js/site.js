@@ -224,6 +224,15 @@
           .then(function (small) {
             var data = new FormData(form);
             picked.forEach(function (i, n) { data.set(i.name, small[n], small[n].name); });
+            /* Email mais limpo: sem campos técnicos nem campos vazios, assunto com nome e localidade */
+            data.delete("_subject");
+            data.delete("_gotcha");
+            Array.from(data.entries()).forEach(function (e) {
+              var empty = e[1] === "" || (e[1] instanceof File && !e[1].size);
+              if (empty && e[0] !== "form-name" && e[0] !== "bot-field") data.delete(e[0]);
+            });
+            data.set("subject", "Pedido de orçamento — Carregador VE — " +
+              (data.get("Nome") || "") + " (" + (data.get("Localidade") || "") + ")");
             return post(location.pathname, data);
           })
           .catch(function () { return { ok: false }; })
@@ -233,6 +242,7 @@
             fileInputs.forEach(function (i) { data.delete(i.name); });
             data.delete("form-name");
             data.delete("bot-field");
+            data.delete("subject");
             if (picked.length) {
               data.append("Fotografias", picked.length + " selecionada(s), não anexadas — pedir ao cliente");
               okKey = form.getAttribute("data-ok-nofiles") || okKey;
