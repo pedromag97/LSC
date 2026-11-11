@@ -216,7 +216,7 @@
 
       var okKey = form.getAttribute("data-ok") || "form.ok";
       var sending;
-      if (form.hasAttribute("data-netlify")) {
+      if (form.hasAttribute("data-fallback")) {
         /* Netlify Forms (com fotografias reduzidas); se falhar, Formspree sem anexos */
         var fileInputs = Array.prototype.slice.call(form.querySelectorAll("input[type=file]"));
         var picked = fileInputs.filter(function (i) { return i.files.length; });
