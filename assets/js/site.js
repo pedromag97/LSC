@@ -272,6 +272,19 @@
     });
   }
 
+  /* ---------- Origem do visitante (utm_source / utm_medium / utm_campaign) ---------- */
+  try {
+    var qs = new URLSearchParams(location.search);
+    if (qs.get("utm_source")) {
+      sessionStorage.setItem("lsc-origem", ["utm_source", "utm_medium", "utm_campaign"]
+        .map(function (k) { return qs.get(k); }).filter(Boolean).join(" / "));
+    }
+    var origem = sessionStorage.getItem("lsc-origem");
+    if (origem) {
+      document.querySelectorAll('input[name="Origem"]').forEach(function (i) { i.value = origem; });
+    }
+  } catch (e) { /* sem sessionStorage: segue sem origem */ }
+
   /* ---------- Arranque ---------- */
   applyLang();
 })();

@@ -125,7 +125,7 @@ function buildEmail(formName, data, createdAt) {
 
 heading("Cliente") +
 '<table role="presentation" width="100%" cellpadding="0" cellspacing="0">' +
-row("Nome", nome) + row("Telemóvel", tel) + row("Email", email) + row("Localidade", local) + row("Assunto", assunto) +
+row("Nome", nome) + row("Telemóvel", tel) + row("Email", email) + row("Localidade", local) + row("Assunto", assunto) + row("Origem", get("Origem")) +
 '</table>' +
 '<p style="margin:18px 0 0;">' +
 (tel ? button(telHref, "Ligar ao cliente", true) : "") +
