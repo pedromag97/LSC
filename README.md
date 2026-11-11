@@ -23,6 +23,20 @@ Os textos das três línguas estão centralizados em `assets/js/i18n.js`. Cada c
 
 O formulário usa o [Formspree](https://formspree.io). Para ativar, criar uma conta gratuita, criar um formulário e substituir `SEU_ID_FORMSPREE` no `index.html` pelo ID gerado.
 
+## Pedido de orçamento de carregadores
+
+O formulário de `carregadores.html` é recebido pelo **Netlify Forms** (aceita fotografias). Se o Netlify falhar, o pedido segue pelo Formspree, sem anexos.
+
+O email com design é enviado pela função `netlify/functions/submission-created.js`, que o Netlify executa a cada pedido e que usa o [Resend](https://resend.com) para o envio. Variáveis de ambiente a definir no Netlify:
+
+| Variável | Valor |
+|---|---|
+| `RESEND_API_KEY` | Chave da API do Resend |
+| `MAIL_FROM` | Remetente, ex.: `Grupo LSC <orcamentos@lusocabo.com>` (domínio validado no Resend) |
+| `MAIL_TO` | Destinatário (opcional; por omissão `geral@lusocabo.com`) |
+
+Sem `RESEND_API_KEY` e `MAIL_FROM` a função não envia nada e fica apenas a notificação normal do Netlify.
+
 ## Desenvolvimento local
 
 Não há build — é um site estático. Para pré-visualizar localmente:
