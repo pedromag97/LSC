@@ -198,7 +198,7 @@
       }).then(function (r) {
         if (r.ok) {
           form.reset();
-          status.textContent = t("form.ok");
+          status.textContent = t(form.getAttribute("data-ok") || "form.ok");
           status.style.color = "#15803d";
         } else {
           status.textContent = t("form.err");
