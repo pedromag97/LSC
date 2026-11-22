@@ -300,6 +300,7 @@ window.I18N = {
     "test.title": "O que dizem sobre nós",
     "test.google": "Avaliação dos nossos clientes no Google",
     "test.link": "Ver todas as avaliações no Google",
+    "test.fact": "5 das 6 avaliações no Google são de 5 estrelas.",
 
     /* Morada e legal */
     "contact.addr": "Morada",
@@ -677,6 +678,7 @@ window.I18N = {
     "test.title": "What people say about us",
     "test.google": "Our clients' rating on Google",
     "test.link": "See all reviews on Google",
+    "test.fact": "5 out of 6 Google reviews are 5-star.",
 
     /* Address & legal */
     "contact.addr": "Address",
@@ -1054,6 +1056,7 @@ window.I18N = {
     "test.title": "Ce que l'on dit de nous",
     "test.google": "La note de nos clients sur Google",
     "test.link": "Voir tous les avis sur Google",
+    "test.fact": "5 des 6 avis Google sont 5 étoiles.",
 
     /* Adresse et mentions légales */
     "contact.addr": "Adresse",
