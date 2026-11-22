@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /backup_site_antigo/
+
+Sitemap: https://lusocabo.com/sitemap.xml

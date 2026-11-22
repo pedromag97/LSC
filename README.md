@@ -11,6 +11,10 @@ Site institucional do **Grupo LSC / Lusocabo** — Telecomunicações (FTTH), El
 | `elec.html` | Eletricidade Geral — instalações e carregadores VE |
 | `renovaveis.html` | Energias Renováveis — centrais fotovoltaicas |
 | `civil.html` | Construção Civil — obras de apoio e house flipping (remodelação de casas antigas) |
+| `orcamento-solar.html` | Landing page de orçamentos de painéis solares (anúncios) |
+| `obrigado.html` | Página de confirmação pós-envio (conversão Google/Meta Ads) |
+| `privacidade.html` | Política de Privacidade (RGPD) |
+| `404.html` | Página de erro personalizada |
 | `assets/css/site.css` | Folha de estilos única |
 | `assets/js/site.js` | Funcionalidades (menu, galerias, lightbox, contadores, formulário) |
 | `assets/js/i18n.js` | **Todos os textos do site em PT / EN / FR** — editar aqui |

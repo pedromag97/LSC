@@ -13,7 +13,7 @@
      MAIL_TO         destinatário; por omissão geral@lusocabo.com
    ============================================================ */
 
-const FORMS = ["orcamento-carregadores", "contacto"];
+const FORMS = ["orcamento-carregadores", "orcamento-solar", "contacto"];
 const SITE = "https://lusocabo.com";
 
 const NAVY = "#0c2c4e";
@@ -72,6 +72,7 @@ function photo(label, file) {
 function buildEmail(formName, data, createdAt) {
   const get = reader(data);
   const isContact = formName === "contacto";
+  const isSolar = formName === "orcamento-solar";
   const nome = get("Nome") || get("name");
   const tel = get("Telemóvel") || get("phone");
   const email = get("email");
@@ -83,23 +84,30 @@ function buildEmail(formName, data, createdAt) {
     timeZone: "Europe/Lisbon", day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit"
   });
 
-  const instalacao =
-    row("Tipo de local", get("Tipo de local")) +
-    row("Carregador", get("Equipamento")) +
-    row("Instalação elétrica", get("Alimentação")) +
-    row("Potência pretendida", get("Potência do carregador")) +
-    row("Potência contratada", get("Potência contratada")) +
-    row("Distância do quadro ao carregador", get("Distância ao quadro (m)") ? get("Distância ao quadro (m)") + " m" : "") +
-    row("Veículo", get("Veículo")) +
-    row("N.º de carregadores", get("N.º de carregadores"));
+  const instalacao = isSolar
+    ? row("Tipo de local", get("Tipo de local")) +
+      row("Fatura média", get("Fatura média (€/mês)") ? get("Fatura média (€/mês)") + " €/mês" : "") +
+      row("Tipo de telhado", get("Tipo de telhado")) +
+      row("Baterias", get("Baterias"))
+    : row("Tipo de local", get("Tipo de local")) +
+      row("Carregador", get("Equipamento")) +
+      row("Instalação elétrica", get("Alimentação")) +
+      row("Potência pretendida", get("Potência do carregador")) +
+      row("Potência contratada", get("Potência contratada")) +
+      row("Distância do quadro ao carregador", get("Distância ao quadro (m)") ? get("Distância ao quadro (m)") + " m" : "") +
+      row("Veículo", get("Veículo")) +
+      row("N.º de carregadores", get("N.º de carregadores"));
 
-  const fotos =
-    photo("Quadro elétrico", get("Foto do quadro elétrico")) +
-    photo("Local do carregador", get("Foto do local")) +
-    photo("Outra fotografia", get("Outra foto"));
+  const fotos = isSolar
+    ? photo("Telhado ou local", get("Foto do telhado")) +
+      photo("Quadro elétrico", get("Foto do quadro elétrico")) +
+      photo("Fatura de eletricidade", get("Foto da fatura"))
+    : photo("Quadro elétrico", get("Foto do quadro elétrico")) +
+      photo("Local do carregador", get("Foto do local")) +
+      photo("Outra fotografia", get("Outra foto"));
 
   const telHref = "tel:" + String(tel).replace(/[^\d+]/g, "");
-  const mailHref = "mailto:" + email + "?subject=" + encodeURIComponent(isContact ? "Re: " + (assunto || "Contacto Grupo LSC") : "Orçamento — Carregador para veículo elétrico");
+  const mailHref = "mailto:" + email + "?subject=" + encodeURIComponent(isContact ? "Re: " + (assunto || "Contacto Grupo LSC") : (isSolar ? "Orçamento — Painéis solares" : "Orçamento — Carregador para veículo elétrico"));
 
   const html =
 '<!DOCTYPE html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pedido de orçamento</title></head>' +
@@ -119,7 +127,7 @@ function buildEmail(formName, data, createdAt) {
 
 /* Corpo */
 '<tr><td style="padding:30px 32px 8px;">' +
-'<p style="margin:0 0 6px;font:700 12px Arial,Helvetica,sans-serif;letter-spacing:1.2px;text-transform:uppercase;color:' + ACCENT + ';">' + (isContact ? 'Formulário de contacto' : 'Carregadores para veículos elétricos') + '</p>' +
+'<p style="margin:0 0 6px;font:700 12px Arial,Helvetica,sans-serif;letter-spacing:1.2px;text-transform:uppercase;color:' + ACCENT + ';">' + (isContact ? 'Formulário de contacto' : (isSolar ? 'Painéis solares fotovoltaicos' : 'Carregadores para veículos elétricos')) + '</p>' +
 '<h1 style="margin:0 0 6px;font:700 24px Arial,Helvetica,sans-serif;color:' + NAVY + ';">' + (isContact ? 'Nova mensagem do site' : 'Novo pedido de orçamento') + '</h1>' +
 '<p style="margin:0;font:400 15px/1.5 Arial,Helvetica,sans-serif;color:' + MUTED + ';"><strong style="color:#25313d;">' + esc(nome) + '</strong>' + (local ? ' · ' + esc(local) : '') + '</p>' +
 
@@ -144,14 +152,14 @@ row("Nome", nome) + row("Telemóvel", tel) + row("Email", email) + row("Localida
 
 /* Rodapé */
 '<tr><td style="padding:24px 32px 28px;">' +
-'<p style="margin:0;padding-top:18px;border-top:1px solid ' + LINE + ';font:400 12px/1.6 Arial,Helvetica,sans-serif;color:' + MUTED + ';">Enviado através do formulário em <a href="' + SITE + (isContact ? '/#contacto' : '/carregadores.html') + '" style="color:' + BLUE + ';">lusocabo.com' + (isContact ? '' : '/carregadores.html') + '</a>.<br>Grupo LSC — Inovação, Transformação e Qualidade</p>' +
+'<p style="margin:0;padding-top:18px;border-top:1px solid ' + LINE + ';font:400 12px/1.6 Arial,Helvetica,sans-serif;color:' + MUTED + ';">Enviado através do formulário em <a href="' + SITE + (isContact ? '/#contacto' : (isSolar ? '/orcamento-solar.html' : '/carregadores.html')) + '" style="color:' + BLUE + ';">lusocabo.com' + (isContact ? '' : (isSolar ? '/orcamento-solar.html' : '/carregadores.html')) + '</a>.<br>Grupo LSC — Inovação, Transformação e Qualidade</p>' +
 '</td></tr>' +
 
 '</table></td></tr></table></body></html>';
 
   const subject = isContact
     ? "Contacto do site — " + nome + (assunto ? " — " + assunto : "")
-    : "Pedido de orçamento — Carregador VE — " + nome + (local ? " (" + local + ")" : "");
+    : "Pedido de orçamento — " + (isSolar ? "Painéis Solares" : "Carregador VE") + " — " + nome + (local ? " (" + local + ")" : "");
   return { subject: subject, html: html, replyTo: email };
 }
 

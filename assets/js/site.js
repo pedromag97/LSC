@@ -29,6 +29,9 @@
     document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
       el.placeholder = t(el.getAttribute("data-i18n-ph"));
     });
+    document.querySelectorAll("[data-i18n-content]").forEach(function (el) {
+      el.setAttribute("content", t(el.getAttribute("data-i18n-content")));
+    });
     document.querySelectorAll(".lang-switch button").forEach(function (b) {
       b.classList.toggle("on", b.getAttribute("data-lang") === lang);
     });
@@ -215,6 +218,7 @@
       }
 
       var okKey = form.getAttribute("data-ok") || "form.ok";
+      var photosDropped = false;
       var sending;
       if (form.hasAttribute("data-fallback")) {
         /* Netlify Forms (com fotografias reduzidas); se falhar, Formspree sem anexos */
@@ -247,6 +251,7 @@
             if (picked.length) {
               data.append("Fotografias", picked.length + " selecionada(s), não anexadas — pedir ao cliente");
               okKey = form.getAttribute("data-ok-nofiles") || okKey;
+              photosDropped = true;
             }
             return post(form.getAttribute("data-fallback"), data);
           });
@@ -257,8 +262,8 @@
       sending.then(function (r) {
         if (r.ok) {
           form.reset();
-          status.textContent = t(okKey);
-          status.style.color = "#15803d";
+          /* Página de obrigado: confirma ao visitante e serve de conversão para Google/Meta Ads */
+          window.location.href = "/obrigado.html" + (photosDropped ? "?fotos=0" : "");
         } else {
           status.textContent = t("form.err");
           status.style.color = "#b91c1c";
@@ -284,6 +289,68 @@
       document.querySelectorAll('input[name="Origem"]').forEach(function (i) { i.value = origem; });
     }
   } catch (e) { /* sem sessionStorage: segue sem origem */ }
+
+  /* ---------- Anúncios: consentimento + Google tag / Meta Pixel ----------
+     Preencher os IDs quando as contas de anúncios estiverem criadas:
+     - googleTag: ID "AW-..." do Google Ads (ou "G-..." do GA4)
+     - googleConvLabel: etiqueta de conversão do Google Ads (ex.: "AbCdEfGh")
+     - metaPixel: ID numérico do Meta Pixel
+     O banner de consentimento só aparece quando houver pelo menos um ID. */
+  var ADS = {
+    googleTag: "",
+    googleConvLabel: "",
+    metaPixel: ""
+  };
+
+  function loadAds() {
+    if (ADS.googleTag) {
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + ADS.googleTag;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      gtag("js", new Date());
+      gtag("consent", "default", { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "granted" });
+      gtag("config", ADS.googleTag);
+    }
+    if (ADS.metaPixel) {
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = [];
+        t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+      }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", ADS.metaPixel);
+      fbq("track", "PageView");
+    }
+    /* Conversão na página de obrigado */
+    if (location.pathname.indexOf("obrigado") !== -1) {
+      if (window.fbq) fbq("track", "Lead");
+      if (window.gtag && ADS.googleConvLabel) gtag("event", "conversion", { send_to: ADS.googleTag + "/" + ADS.googleConvLabel });
+    }
+  }
+
+  (function consentInit() {
+    if (!ADS.googleTag && !ADS.metaPixel) return;
+    var choice = null;
+    try { choice = localStorage.getItem("lsc-consent"); } catch (e) {}
+    if (choice === "yes") { loadAds(); return; }
+    if (choice === "no") return;
+    var box = document.createElement("div");
+    box.className = "consent";
+    box.innerHTML = '<span data-i18n-html="consent.msg"></span>' +
+      '<div class="consent-actions"><button class="yes" data-i18n="consent.yes">Aceitar</button>' +
+      '<button class="no" data-i18n="consent.no">Rejeitar</button></div>';
+    document.body.appendChild(box);
+    box.querySelector(".yes").addEventListener("click", function () {
+      try { localStorage.setItem("lsc-consent", "yes"); } catch (e) {}
+      box.remove(); loadAds();
+    });
+    box.querySelector(".no").addEventListener("click", function () {
+      try { localStorage.setItem("lsc-consent", "no"); } catch (e) {}
+      box.remove();
+    });
+  })();
 
   /* ---------- Arranque ---------- */
   applyLang();
