@@ -37,7 +37,6 @@
             <li><a href="elec.html" data-i18n="nav.elec">Eletricidade Geral</a></li>
             <li><a href="carregadores.html" data-i18n="nav.ev">Carregadores VE</a></li>
             <li><a href="renovaveis.html" class="active" data-i18n="nav.renov">Energias Renováveis</a></li>
-            <li><a href="orcamento-solar.html" data-i18n="nav.sol">Painéis Solares</a></li>
             <li><a href="civil.html" data-i18n="nav.civil">Construção Civil</a></li>
           </ul>
         </li>
@@ -62,7 +61,7 @@
       <p data-i18n="ren.heroSub">Centrais solares fotovoltaicas chave-na-mão, em Portugal e França.</p>
       <div class="hero-cta">
         <a href="#galeria" class="btn btn-primary" data-i18n="gal.kicker">Portefólio</a>
-        <a href="orcamento-solar.html#orcamento" class="btn btn-outline" data-i18n="ren.quoteBtn">Pedir orçamento solar</a>
+        <a href="#orcamento" class="btn btn-outline" data-i18n="ren.quoteBtn">Pedir orçamento solar</a>
       </div>
     </div>
   </section>
@@ -92,8 +91,105 @@
     </div>
   </section>
 
+  <!-- ===== Pedido de orçamento ===== -->
+  <section id="orcamento" style="background:var(--bg-soft);">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <div class="sec-head">
+          <span class="kicker" data-i18n="sol.kicker">Orçamento gratuito</span>
+          <h2 data-i18n="sol.title">Peça o seu orçamento solar</h2>
+        </div>
+        <p style="color:var(--muted);" data-i18n="sol.p1"></p>
+        <ul class="svc-list">
+          <li data-i18n="sol.s1"></li>
+          <li data-i18n="sol.s2"></li>
+          <li data-i18n="sol.s3"></li>
+          <li data-i18n="sol.s4"></li>
+        </ul>
+        <div class="contact-card">
+          <a class="contact-item" href="tel:+351255812525">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>(+351) 255 812 525<small data-i18n="contact.phonen">Chamada para a rede fixa nacional</small></div>
+          </a>
+          <a class="contact-item" href="mailto:geral@lusocabo.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            <div>geral@lusocabo.com<small data-i18n="contact.email">Email</small></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <!-- Envio: Netlify Forms (aceita fotografias); se falhar, segue por Formspree sem anexos -->
+        <form name="orcamento-solar" action="/renovaveis.html" method="POST" enctype="multipart/form-data"
+              data-netlify="true" netlify-honeypot="bot-field"
+              data-fallback="https://formspree.io/f/mojzkaop" data-subject="Pedido de orçamento — Painéis Solares" data-ok="ev.ok" data-ok-nofiles="ev.okNoPhotos">
+          <input type="hidden" name="form-name" value="orcamento-solar">
+          <input type="hidden" name="Origem" value="">
+          <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none">
+          <input type="hidden" name="subject" data-remove-prefix value="Pedido de orçamento — Painéis Solares">
+          <input type="hidden" name="_subject" value="Pedido de orçamento — Painéis Solares">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+
+          <div class="form-row">
+            <fieldset><input name="Nome" type="text" autocomplete="name" data-i18n-ph="form.name" placeholder="Nome *" required></fieldset>
+            <fieldset><input name="Telemóvel" type="tel" autocomplete="tel" data-i18n-ph="ev.fPhone" placeholder="Telemóvel *" required></fieldset>
+          </div>
+          <div class="form-row">
+            <fieldset><input name="email" type="email" autocomplete="email" data-i18n-ph="form.email" placeholder="Email *" required></fieldset>
+            <fieldset><input name="Localidade" type="text" data-i18n-ph="ev.fLocal" placeholder="Localidade / Código postal *" required></fieldset>
+          </div>
+
+          <div class="form-row">
+            <fieldset>
+              <select name="Tipo de local" required aria-label="Tipo de local">
+                <option value="" disabled selected data-i18n="sol.fSite">Tipo de local *</option>
+                <option value="Moradia" data-i18n="sol.site1">Moradia</option>
+                <option value="Empresa / armazém" data-i18n="sol.site2">Empresa / armazém</option>
+                <option value="Prédio / condomínio" data-i18n="sol.site3">Prédio / condomínio</option>
+                <option value="Terreno / outro" data-i18n="sol.site4">Terreno / outro</option>
+              </select>
+            </fieldset>
+            <fieldset><input name="Fatura média (€/mês)" type="number" min="0" step="1" inputmode="numeric" data-i18n-ph="sol.fBill" placeholder="Fatura média de eletricidade (€/mês) *" required></fieldset>
+          </div>
+
+          <div class="form-row">
+            <fieldset>
+              <select name="Tipo de telhado" aria-label="Tipo de telhado">
+                <option value="" selected data-i18n="sol.fRoof">Tipo de telhado</option>
+                <option value="Inclinado (telha)" data-i18n="sol.roof1">Inclinado (telha)</option>
+                <option value="Plano" data-i18n="sol.roof2">Plano</option>
+                <option value="Chapa / painel sandwich" data-i18n="sol.roof3">Chapa / painel sandwich</option>
+                <option value="Não sei" data-i18n="ev.dontKnow">Não sei</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <select name="Baterias" aria-label="Baterias de armazenamento">
+                <option value="" selected data-i18n="sol.fBattery">Baterias de armazenamento</option>
+                <option value="Sim" data-i18n="sol.bat1">Sim, quero baterias</option>
+                <option value="Não / talvez mais tarde" data-i18n="sol.bat2">Não / talvez mais tarde</option>
+                <option value="Não sei" data-i18n="ev.dontKnow">Não sei</option>
+              </select>
+            </fieldset>
+          </div>
+
+          <fieldset><textarea name="Observações" data-i18n-ph="sol.fMsg" placeholder="Observações (sombras, orientação do telhado, prazos…)"></textarea></fieldset>
+          <p class="file-title" data-i18n="ev.fPhotos">Fotografias (opcional)</p>
+          <div class="file-grid">
+            <fieldset><label for="sol-foto1" data-i18n="sol.ph1">Telhado ou local</label><input id="sol-foto1" name="Foto do telhado" type="file" accept="image/*"></fieldset>
+            <fieldset><label for="sol-foto2" data-i18n="sol.ph2">Quadro elétrico</label><input id="sol-foto2" name="Foto do quadro elétrico" type="file" accept="image/*"></fieldset>
+            <fieldset><label for="sol-foto3" data-i18n="sol.ph3">Fatura de eletricidade</label><input id="sol-foto3" name="Foto da fatura" type="file" accept="image/*"></fieldset>
+          </div>
+          <button type="submit" class="btn btn-navy" data-i18n="ev.send">Pedir orçamento</button>
+          <p class="form-status" role="status" style="margin-top:12px;font-weight:600;"></p>
+          <p class="form-note" data-i18n="sol.note">* Campos obrigatórios. Fotografias do telhado e da fatura ajudam-nos a dimensionar melhor o sistema.</p>
+          <p class="form-note" data-i18n-html="form.privacy">Ao enviar, concorda com o tratamento dos seus dados nos termos da <a href="privacidade.html">Política de Privacidade</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Galeria ===== -->
-  <section id="galeria" style="background:var(--bg-soft);">
+  <section id="galeria">
     <div class="container">
       <div class="sec-head reveal">
         <span class="kicker" data-i18n="gal.kicker">Portefólio</span>
@@ -138,7 +234,7 @@
     <div class="container reveal">
       <h2 data-i18n="ren.ctaTitle">Pronto para produzir a sua própria energia?</h2>
       <p data-i18n="cta.p"></p>
-      <a href="orcamento-solar.html#orcamento" class="btn btn-navy" data-i18n="ren.quoteBtn">Pedir orçamento solar</a>
+      <a href="#orcamento" class="btn btn-navy" data-i18n="ren.quoteBtn">Pedir orçamento solar</a>
     </div>
   </section>
 
@@ -180,7 +276,6 @@
             <li><a href="elec.html" data-i18n="nav.elec">Eletricidade Geral</a></li>
             <li><a href="carregadores.html" data-i18n="nav.ev">Carregadores VE</a></li>
             <li><a href="renovaveis.html" data-i18n="nav.renov">Energias Renováveis</a></li>
-            <li><a href="orcamento-solar.html" data-i18n="nav.sol">Painéis Solares</a></li>
             <li><a href="civil.html" data-i18n="nav.civil">Construção Civil</a></li>
           </ul>
         </div>
