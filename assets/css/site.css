@@ -670,6 +670,13 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7.5px) rota
 }
 
 /* ---------- Testemunhos ---------- */
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 420px));
+  justify-content: center;
+  gap: 20px;
+}
+.test-grid .testimonial-card { max-width: none; margin: 0; }
 .testimonial-card {
   background: #fff;
   border: 1px solid var(--line);
