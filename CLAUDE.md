@@ -18,7 +18,8 @@ Site institucional do **Grupo LSC / Lusocabo** (lusocabo.com) — Telecomunicaç
 
 ## Regras e cuidados
 - **Codificação**: cuidado com scripts PowerShell gravados em ficheiro .ps1 e executados no PS 5.1 — texto acentuado fica duplamente codificado (já aconteceu; corrigido no commit fdf8d02). Preferir a ferramenta Edit para conteúdo com acentos.
-- **Testemunhos**: só conteúdo real fornecido pelo dono. A crítica do André Faria vem do Google (perfil "Lousacabo", 4,3★, 6 avaliações). Não inventar avaliações.
+- **Testemunhos**: só conteúdo real fornecido pelo dono. Não inventar avaliações.
+- **Perfil "Lousacabo" (Google)**: por decisão do dono, o site **não** se associa a esse perfil nem à marca LOUSA — sem links, nomes, widgets ou avaliações ligados a ele. Links de mapa usam só coordenadas (41.2831297,-8.307354). Usar apenas a marca Lusocabo / Grupo LSC.
 - **Imagens**: otimizar antes de adicionar (máx ~1600px, JPEG ~q72). Originais pesados ficam em `backup_site_antigo/` (fora do git, só local/OneDrive).
 - **Ficheiros internos**: o Netlify publica a raiz do repositório, por isso qualquer ficheiro no git fica acessível em lusocabo.com. O `_redirects` força 404 (`404!`) para `CLAUDE.md`, `README.md`, `IDEIAS.png`, `prepros-6.config`, `/netlify/*` e `/.claude/*` (commit fb7425f). Ao adicionar ao git um ficheiro que não é do site (notas, rascunhos, configs), acrescentar uma regra lá e confirmar com `curl` que dá 404.
 - Commits em português, mensagem imperativa curta.
@@ -26,5 +27,4 @@ Site institucional do **Grupo LSC / Lusocabo** (lusocabo.com) — Telecomunicaç
 ## Pendentes
 - [ ] Preencher IDs do Google Ads (`AW-…` + conversion label) e Meta Pixel em `site.js` quando o dono os enviar
 - [ ] Mais testemunhos reais quando o dono os recolher (grelha em `index.html` § `#testemunhos`)
-- [ ] Dono: reivindicar perfil Google Business "Lousacabo"
 - [ ] (Se surgir) nº de alvará IMPIC para o rodapé
