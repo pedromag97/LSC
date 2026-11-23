@@ -20,6 +20,7 @@ Site institucional do **Grupo LSC / Lusocabo** (lusocabo.com) — Telecomunicaç
 - **Codificação**: cuidado com scripts PowerShell gravados em ficheiro .ps1 e executados no PS 5.1 — texto acentuado fica duplamente codificado (já aconteceu; corrigido no commit fdf8d02). Preferir a ferramenta Edit para conteúdo com acentos.
 - **Testemunhos**: só conteúdo real fornecido pelo dono. A crítica do André Faria vem do Google (perfil "Lousacabo", 4,3★, 6 avaliações). Não inventar avaliações.
 - **Imagens**: otimizar antes de adicionar (máx ~1600px, JPEG ~q72). Originais pesados ficam em `backup_site_antigo/` (fora do git, só local/OneDrive).
+- **Ficheiros internos**: o Netlify publica a raiz do repositório, por isso qualquer ficheiro no git fica acessível em lusocabo.com. O `_redirects` força 404 (`404!`) para `CLAUDE.md`, `README.md`, `IDEIAS.png`, `prepros-6.config`, `/netlify/*` e `/.claude/*` (commit fb7425f). Ao adicionar ao git um ficheiro que não é do site (notas, rascunhos, configs), acrescentar uma regra lá e confirmar com `curl` que dá 404.
 - Commits em português, mensagem imperativa curta.
 
 ## Pendentes
