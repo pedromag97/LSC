@@ -1,2 +1,10 @@
 /orcamento-solar.html  /renovaveis.html#orcamento  301
 /orcamento-solar  /renovaveis.html#orcamento  301
+
+# Ficheiros internos do projeto — não servir publicamente
+/CLAUDE.md          /404.html  404!
+/README.md          /404.html  404!
+/IDEIAS.png         /404.html  404!
+/prepros-6.config   /404.html  404!
+/netlify/*          /404.html  404!
+/.claude/*          /404.html  404!
