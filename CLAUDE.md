@@ -15,6 +15,7 @@ Site institucional do **Grupo LSC / Lusocabo** (lusocabo.com) — Telecomunicaç
 - UTMs registados em `sessionStorage` e enviados no campo oculto `Origem` de cada formulário.
 - Em `site.js` há `var ADS = { googleTag, googleConvLabel, metaPixel }` — **IDs por preencher**. Com pelo menos um ID, aparece o banner de consentimento (RGPD) e os pixels só carregam após "Aceitar". Conversão = visita a `/obrigado.html` (evento Lead no Meta; conversão gtag se houver label).
 - Landing pages das campanhas: carregadores → `/carregadores.html` · solar → `/renovaveis.html#orcamento`.
+- Instagram: @grupo_lsc (já ligado no rodapé e no `sameAs`). Imagens dos anúncios em `anuncios/instagram/` (1:1, 4:5, 9:16; fotos reais + cores do site), geradas por `anuncios/gerar_imagens_instagram.py` (`python anuncios/gerar_imagens_instagram.py . anuncios/instagram`). A pasta `anuncios/` está no `.gitignore` — fica só local/OneDrive.
 
 ## Regras e cuidados
 - **Codificação**: cuidado com scripts PowerShell gravados em ficheiro .ps1 e executados no PS 5.1 — texto acentuado fica duplamente codificado (já aconteceu; corrigido no commit fdf8d02). Preferir a ferramenta Edit para conteúdo com acentos.

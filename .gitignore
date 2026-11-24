@@ -4,3 +4,6 @@ backup_site_antigo/
 # Configuração local do Claude Code (exceto o launch do servidor de preview)
 .claude/*
 !.claude/launch.json
+
+# Imagens e textos de anúncios (material de trabalho, não é do site)
+anuncios/
