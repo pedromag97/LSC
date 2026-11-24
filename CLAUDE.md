@@ -16,7 +16,7 @@ Site institucional do **Grupo LSC / Lusocabo** (lusocabo.com) — Telecomunicaç
 
 ## Anúncios (Google + Meta)
 - UTMs registados em `sessionStorage` e enviados no campo oculto `Origem` de cada formulário.
-- Em `site.js` há `var ADS = { googleTag, googleConvLabel, metaPixel }` — **IDs por preencher**. Com pelo menos um ID, aparece o banner de consentimento (RGPD) e os pixels só carregam após "Aceitar". Conversão = visita a `/obrigado.html` (evento Lead no Meta; conversão gtag se houver label).
+- Em `site.js` há `var ADS = { googleTag, googleConvLabel, metaPixel }` — Meta Pixel preenchido (`1153682660781933`, "Pixel Grupo LSC - lusocabo.com", portfólio grupo_lsc, ligado à conta de anúncios Grupo LSC 1688845539483115); IDs do Google por preencher. Com pelo menos um ID, aparece o banner de consentimento (RGPD) e os pixels só carregam após "Aceitar". Conversão = visita a `/obrigado.html` (evento Lead no Meta; conversão gtag se houver label).
 - Landing pages das campanhas: carregadores → `/carregadores.html` · solar → `/renovaveis.html#orcamento`.
 - Instagram: @grupo_lsc (já ligado no rodapé e no `sameAs`). Imagens dos anúncios em `anuncios/instagram/` (1:1, 4:5, 9:16; fotos reais + cores do site), geradas por `anuncios/gerar_imagens_instagram.py` (`python anuncios/gerar_imagens_instagram.py . anuncios/instagram`). A pasta `anuncios/` está no `.gitignore` — fica só local.
 
@@ -29,6 +29,6 @@ Site institucional do **Grupo LSC / Lusocabo** (lusocabo.com) — Telecomunicaç
 - Commits em português, mensagem imperativa curta.
 
 ## Pendentes
-- [ ] Preencher IDs do Google Ads (`AW-…` + conversion label) e Meta Pixel em `site.js` quando o dono os enviar
+- [ ] Preencher IDs do Google Ads (`AW-…` + conversion label) em `site.js` quando o dono os enviar
 - [ ] Mais testemunhos reais quando o dono os recolher (grelha em `index.html` § `#testemunhos`)
 - [ ] (Se surgir) nº de alvará IMPIC para o rodapé
